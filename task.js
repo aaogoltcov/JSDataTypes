@@ -23,15 +23,15 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
     let today = new Date();
     let creditMonths = getMonths(date, today);
     let monthlyPayment = creditBody * (percentRate + percentRate / (Math.pow((1 + percentRate), creditMonths) - 1));
-    return (monthlyPayment * creditMonths).toFixed(2);
+    return parseFloat((monthlyPayment * creditMonths).toFixed(2));
 }
 
 // Task 2
 function getGreeting(name) {
     let alterName = 'Аноним'
     if (!name || name == "null" || name == "undefined") {
-        return `Привет, мир! Меня зовут ${alterName}”`;
+        return `Привет, мир! Меня зовут ${alterName}`;
     } else {
-        return `Привет, мир! Меня зовут ${name}”`
+        return `Привет, мир! Меня зовут ${name}`
     }
 }
